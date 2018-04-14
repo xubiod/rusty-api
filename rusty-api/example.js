@@ -21,8 +21,15 @@ var server = rusty.http.createServer(function (req, res) {
         rusty.writehtml(res,
             "this is write text<br><br>",
             "hello!<br><br>",
-            "<h1>I LOVE YOU DOG</h1>"
+            "<h1>I LOVE YOU DOG</h1><br><br>",
+            rusty.style(res, "color: red",
+                "this is rwed"
+            )
         );
+    });
+
+    rusty.page(req, "/texttest", function () {
+        rusty.writetextfile(res, "example.test.txt");
     });
 
     rusty.errorpage(req, function () {
