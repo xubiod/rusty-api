@@ -42,12 +42,12 @@ module.exports = {
 
     //file
     writetextfile: function (res, file) {
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
+        //res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.write(require('fs').readFileSync(file));
         res.end();
     },
     writehtmlfile: function (res, file) {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
+        //res.writeHead(200, { 'Content-Type': 'text/html' });
         res.write(require('fs').readFileSync(file));
         res.end();
     },
