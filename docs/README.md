@@ -33,20 +33,37 @@ var server = rusty.http.createServer(function (req, res) {
     * this is just `require('fs')`
 
 * **methods**
-  * pages
+  * **pages**
     * `rusty.page(req, url, callback)`
+      * `req` - http server request
+      * `url` - the url to base the content
+      * `callback` - the function to execute when the url is correct
     * `rusty.defaultpage(req, callback)`
+      * `req` - http server request
+      * `callback` - the function to execute when the url is correct
     * `rusty.errorpage(req, callback)`
+      * `req` - http server request
+      * `callback` - the function to execute when the url is correct
       * must be last in page declaration
-  * writing content via inputs
+  * **writing content via inputs**
     * `rusty.writestring(res, text)`
+      * `res` - https response
+      * `text` - text to write to page, ends the response
     * `rusty.writetext(res)`
+      * `res` - https response
       * this method uses the rest of the arguments for content
     * `rusty.writehtml(res)`
+      * `res` - https response
       * this method uses the rest of the arguments for content
-  * writing content via files
-    * `rusty.writetextfile(res)`
-    * `rusty.writehtmlfile(res)`
-  * miscellanous
+  * **writing content via files**
+    * `rusty.writetextfile(res, file)`
+      * `res` - https response
+      * `file` - the local file to read
+    * `rusty.writehtmlfile(res, file)`
+      * `res` - https response
+      * `file` - the local file to read
+  * **miscellanous**
     * `rusty.style(res, style)`
+      * `res` - http response
+      * `style` - css styling
       * this method uses the rest of the arguments for content
