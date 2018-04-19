@@ -1,6 +1,6 @@
 # usage
 
-basic example here adapted from [this file.](/rusty-api/example.js)
+basic example here adapted from [this file.](https://github.com/xubiod/rusty-api/blob/master/rusty-api/example.js)
 
 ```js
 var rusty = require('./lib');
